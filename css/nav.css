@@ -1,13 +1,13 @@
 /*
-	$(window).scroll(function(){
-	    if (window.pageYOffset >= 100) {
-	        $('#div').css("position","fixed");
-	    }
-	});
+  $(window).scroll(function(){
+      if (window.pageYOffset >= 100) {
+          $('#div').css("position","fixed");
+      }
+  });
 
 
 
-	$(function () {
+  $(function () {
              var $win = $(window);
  
              $win.scroll(function () {

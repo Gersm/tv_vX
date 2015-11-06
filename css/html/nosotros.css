@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Questrial");
+#nosotros li {
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+  width: 45%;
+  overflow: hidden;
+  margin: 0 10px;
+  font-family: 'Questrial', sans-serif;
+}
+#nosotros li img {
+  width: 110%;
+  heigth: 90%;
+}
+#nosotros li h2 {
+  font-weight: bold;
+  margin: 7px 0;
+}
+#nosotros li h3 {
+  margin: 4px 0;
+}
+#nosotros li p {
+  text-align: justify;
+}
