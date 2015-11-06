@@ -1,0 +1,147 @@
+/*
+	$(window).scroll(function(){
+	    if (window.pageYOffset >= 100) {
+	        $('#div').css("position","fixed");
+	    }
+	});
+
+
+
+	$(function () {
+             var $win = $(window);
+ 
+             $win.scroll(function () {
+                 if ($win.scrollTop() == 0)
+                     alert('Scrolled to Page Top');
+                 else if ($win.height() + $win.scrollTop()
+                                == $(document).height()) {
+                     alert('Scrolled to Page Bottom');
+                 }
+             });
+         });
+
+
+
+$(window).height(); // devuelve la altura del viewport del navegador
+$(document).height(); // devuelve la altura del documento HTML
+$(window).scrollTop(); // devuelve la posición vertical actual de la barra de scroll
+
+
+$ ("#other") .click (Función () {
+  $ ("#target") .scroll ();
+});
+
+
+
+*/
+nav,
+nav * {
+  moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  height: 50px;
+}
+nav {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+nav ul {
+  text-align: right;
+  background: rgba(0,0,0,0.7);
+}
+nav ul #logo {
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  text-align: left;
+}
+nav ul #logo:hover {
+  border: none;
+}
+nav ul #logo img {
+  height: 40px;
+  margin: 5px 0 0 10px;
+}
+nav li {
+  overflow: hidden;
+  moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+nav li a {
+  color: #ddd;
+  display: block;
+  font-size: 12px;
+  line-height: 50px;
+  padding: 0 10px;
+}
+nav li:hover {
+  border-bottom: 3px solid #428bca;
+}
+#activo {
+  border-bottom: 3px solid #428bca;
+  color: #ddd;
+  font-size: 12px;
+  line-height: 50px;
+  padding: 0 10px;
+}
+#treslineas {
+  border-radius: 5px;
+  display: none;
+  height: 40px;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  width: 45px;
+  moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+#treslineas:hover {
+  border: 2px solid #428bca;
+}
+#treslineas:hover div {
+  height: 4.5px;
+}
+#treslineas div {
+  background: #428bca;
+  border-radius: 10px;
+  height: 5px;
+  margin: 6px;
+}
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  #logo {
+    width: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    height: 50px;
+  }
+  nav ul #logo {
+    background: transparent;
+    position: static;
+    width: 180px;
+  }
+  nav ul li {
+    background: rgba(10,10,10,0.95);
+    display: block;
+  }
+  nav ul li a {
+    font-size: 15px;
+  }
+  nav #treslineas {
+    display: block;
+  }
+  .desplegado {
+    height: 300px !important;
+  }
+}

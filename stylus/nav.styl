@@ -1,0 +1,150 @@
+alto_nav = 50px;
+margin_arriba = 5px;
+alto_img = alto_nav - (margin_arriba*2);
+cant_element = 5;
+
+
+// DETECTAR SCROLL PARA Q DESAPARESCA EL LOGO
+
+/*
+	$(window).scroll(function(){
+	    if (window.pageYOffset >= 100) {
+	        $('#div').css("position","fixed");
+	    }
+	});
+
+
+
+	$(function () {
+             var $win = $(window);
+ 
+             $win.scroll(function () {
+                 if ($win.scrollTop() == 0)
+                     alert('Scrolled to Page Top');
+                 else if ($win.height() + $win.scrollTop()
+                                == $(document).height()) {
+                     alert('Scrolled to Page Bottom');
+                 }
+             });
+         });
+
+
+
+$(window).height(); // devuelve la altura del viewport del navegador
+$(document).height(); // devuelve la altura del documento HTML
+$(window).scrollTop(); // devuelve la posición vertical actual de la barra de scroll
+
+
+$ ("#other") .click (Función () {
+  $ ("#target") .scroll ();
+});
+
+
+
+*/
+
+nav, nav *
+	moz-transition: all 0.8s ease-in-out;
+	-ms-transition: all 0.8s ease-in-out;
+	-o-transition: all 0.8s ease-in-out;
+	-webkit-transition: all 0.8s ease-in-out;
+	transition: all 0.8s ease-in-out;
+	height alto_nav
+
+nav
+	overflow hidden
+	position fixed
+	width 100%
+	z-index 100
+	ul
+		text-align right
+		background rgba(0,0,0,0.7)
+		#logo
+			left 0
+			overflow hidden
+			position absolute
+			text-align left
+			&:hover
+				border none
+			img
+				height alto_img
+				margin margin_arriba 0 0 (margin_arriba * 2)
+	li
+		overflow hidden
+		moz-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-webkit-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		a
+			color #ddd
+			display block
+			font-size 12px
+			line-height alto_nav
+			padding 0 (margin_arriba * 2)
+			
+		&:hover
+			border-bottom 3px solid #428bca
+			
+#activo
+	border-bottom 3px solid #428bca
+	color #ddd
+	font-size 12px
+	line-height alto_nav
+	padding 0 (margin_arriba * 2)
+	
+#treslineas
+	border-radius 5px
+	display none
+	height alto_img
+	position absolute
+	right (margin_arriba * 2)
+	top margin_arriba
+	width alto_img + 5px
+	moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	transition: all 0.4s;
+	&:hover
+		border 2px solid #428bca
+		div
+			height 4.5px
+	div
+		background #428bca
+		border-radius 10px
+		height 5px
+		margin 6px
+			
+	
+		
+
+@media screen and (min-width: 769px) and (max-width: 1199px)
+	#logo
+		width 60px
+
+@media screen and (max-width: 768px)
+	nav
+		height alto_nav
+		ul
+			#logo
+				background transparent
+				position static
+				width 180px
+			li
+				background rgba(10,10,10,0.95)
+				display block
+				a
+					font-size 15px
+		#treslineas
+			display block
+	.desplegado
+		height (alto_nav * (cant_element + 1)) !important
+
+// @media screen and (min-width: 481px) and (max-width: 768px)
+// 	#logo
+// 		width 180px
+
+// @media screen and (max-width: 480px)
+// 	#logo
+// 		width 60px
